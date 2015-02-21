@@ -1,0 +1,77 @@
+﻿@model MRDBmvc.Models.registertable
+@{
+    ViewBag.Title = "MRDB";
+    Layout = "/Views/Shared/_Layout2.cshtml";
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MRDB</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/images/favicon.ico" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/Mystylesheet.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+
+</head>
+<body id="page-top">
+    @{
+        HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        HttpContext.Current.Response.AddHeader("Pragma", "no-cache");
+        HttpContext.Current.Response.AddHeader("Expires", "0");
+
+        if (Session["key"] == null)
+        {
+            HttpContext.Current.Response.Redirect("/Home/Index/#login");
+        }
+    }
+
+    <!-- search -->
+
+    <div class="container">
+
+        <div class="members">
+            <center>
+                @using (Html.BeginForm("index", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <br /><br />
+                    <label class="l" for="file">Upload Song:</label><br /><br /><br />
+                    <input class="l" type="file" name="file" id="file" /><br /><br />
+                    <input type="submit" class="btn btn-warning" value="Upload" />
+                    <br><br>
+                    <div class="text-danger">@ViewBag.Message</div><br /><div class="text-success">Search uploaded song <a href="/Reg/reg">HERE</a></div>
+                }
+
+
+            </center>
+
+        </div>
+        <div class="footer1">
+            <p>&copy; Copyrights 2015 MRDB, Music Rating Database</p>
+        </div>
+
+    </div>
+
+
+
+    @section scripts{
+
+        <script src="~/Scripts/jquery-2.1.1.min.js"></script>
+        <script src="~/Scripts/jqBootstrapValidation.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/agency.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="~/Scripts/cbpAnimatedHeader.js"></script>
+        <script src="~/Scripts/classie.js"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+
+            });
+        </script>
+    }
+
+</body>
+</html>

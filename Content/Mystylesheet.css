@@ -1,0 +1,812 @@
+﻿body {
+    background: fixed;
+    background-image: url(images/golden.jpg);
+    background-repeat: no-repeat;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+    .navbar-brand img {
+        margin-top: 0;
+        margin-left: 49px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+#top {
+    padding: 0;
+}
+
+
+    #top ul li a {
+        margin-top: 1px;
+        margin-left: 9px;
+        margin-right: 9px;
+        margin-bottom: 0;
+        font-family: 'Century Gothic';
+        color: gold;
+        font-size: 15px;
+        height: 60px;
+    }
+
+    #top a:hover {
+        font-family: 'Century Gothic';
+        color: lightyellow;
+        background-color: black;
+        border-top: 3px solid;
+        border-color: lightyellow;
+        margin-top: 0;
+        margin-left: 9px;
+        margin-right: 9px;
+        margin-bottom: 0;
+    }
+
+nav {
+    width: 1055px;
+    height: 61px;
+    opacity: 0.9;
+    margin-left: 128px;
+}
+
+#my-carousel {
+    margin-top: 59px;
+    margin-left: 23px;
+    width: 1055px;
+    height: 98px;
+    margin-bottom: 472px;
+}
+
+    #my-carousel li {
+        list-style-type: none;
+        padding: 6px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+.carousel-inner {
+    height: 590px;
+}
+.footer1 {
+    margin-top: 3px;
+    position: relative;
+    padding: 9px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    height: 35px;
+    width: 1055px;
+    background-color: #ce6f30;
+    margin-left: 23px;
+}
+
+.footer {
+    margin-top: 1px;
+    position: fixed;
+    padding: 9px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    height: 35px;
+    width: 1055px;
+    background-color: #ce6f30;
+    margin-left: 23px;
+}
+
+.footer3 {
+    margin-top: 3px;
+    position: relative;
+    padding: 9px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    height: 35px;
+    width: 1055px;
+    background-color: #ce6f30;
+    margin-left: 118px;
+}
+
+.navbar-inverse .nav li a {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.navbar-inverse #top .navbar-header .navbar-collapse .navbar-nav > .active > a {
+    color: #f9fb19;
+    border-top: 3px solid;
+    border-color: #f9fb19;
+}
+
+#welcome {
+    margin: 0;
+    padding: 0;
+    background-color: #120d0d;
+    width: 1056px;
+    height: 200px;
+    padding-left: 8px;
+    text-align: left;
+    opacity: 0.6;
+    border: none;
+    color: lightyellow;
+    font-size: 14px;
+    font-family: 'Century Gothic';
+}
+
+    #welcome h1 {
+        margin: 6px;
+        color: #fc7917;
+    }
+
+    #welcome p {
+        color: white;
+        padding: 7px;
+        line-height: 27px;
+    }
+
+.carousel-caption {
+    margin: 0;
+    position: absolute;
+    left: 128px;
+    border: none;
+}
+
+section#contact {
+    margin-left: 128px;
+    width: 1055px;
+    height: 680px;
+    background-color: black;
+    padding: 80px;
+}
+
+    section#contact .section-heading {
+        color: #fc7917;
+        font-family: 'Century Gothic';
+        margin-bottom: 55px;
+    }
+
+    section#contact .form-group {
+        margin-bottom: 25px;
+    }
+
+        section#contact .form-group input,
+        section#contact .form-group textarea {
+            padding: 20px;
+            border: 2px solid;
+            border-color: gold;
+        }
+
+            section#contact .form-group input.form-control {
+                height: auto;
+            }
+
+            section#contact .form-group textarea.form-control {
+                height: 236px;
+            }
+
+    section#contact .form-control:focus {
+        border-color: #fed136;
+        box-shadow: none;
+    }
+
+    section#contact::-webkit-input-placeholder {
+        text-transform: uppercase;
+        font-family: 'Century Gothic';
+        font-weight: 700;
+        color: #bbb;
+    }
+
+    section#contact:-moz-placeholder {
+        text-transform: uppercase;
+        font-family: 'Century Gothic';
+        font-weight: 700;
+        color: #bbb;
+    }
+
+    section#contact::-moz-placeholder {
+        text-transform: uppercase;
+        font-family: 'Century Gothic';
+        font-weight: 700;
+        color: #bbb;
+    }
+
+    section#contact:-ms-input-placeholder {
+        text-transform: uppercase;
+        font-family: 'Century Gothic';
+        font-weight: 700;
+        color: #bbb;
+    }
+
+    section#contact .text-danger {
+        color: #e74c3c;
+    }
+
+.btn-xl {
+    padding: 4px 30px;
+    text-transform: uppercase;
+    font-family: 'Century Gothic';
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 60px;
+    background-color: #d78d32;
+}
+/*about section*/
+
+section#about .container {
+    margin-left: 128px;
+    width: 1055px;
+    height: 680px;
+    background-color: black;
+    padding: 1px;
+    border-bottom:2px solid;
+    border-color:#ef771d;
+}
+
+
+section#about .section-heading {
+    color: #fc7917;
+    font-family: 'Century Gothic';
+    margin-bottom: 153px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+section#about .row {
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    width: 1053px;
+    height: 353px;
+}
+
+    section#about .row .col-lg-3 {
+        width: 320px;
+        height: 340px;
+        padding: 9px;
+        margin: 13px;
+        background-color: #fed39f;
+        font-size: 16px;
+        font-family: 'Century Gothic';
+        color: black;
+        border: 3px solid;
+        border-color: #fc7917;
+    }
+
+        section#about .row .col-lg-3 p {
+            margin-top: 5px;
+            margin-left: 32px;
+        }
+
+        section#about .row .col-lg-3 #firstimage {
+            width: 220px;
+            height: 150px;
+            padding: 3px;
+            border: 1px dotted;
+            border-color: black;
+        }
+
+/*register*/
+
+section#register .container {
+    margin-left: 128px;
+    width: 1055px;
+    height: 680px;
+    background-color: black;
+    padding: 1px;
+    border-bottom:2px solid;
+    border-color:#ef771d;
+}
+
+
+section#register .section-heading {
+    color: #fc7917;
+    font-family: 'Century Gothic';
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+section#register #signin {
+    width: 170px;
+    height: 60px;
+    font-size: 15px;
+    margin-bottom:25px;
+    float: right;
+    color: yellow;
+    font-family: 'Century Gothic';
+}
+
+    section#register #signin a {
+        color: yellow;
+        text-decoration: underline;
+    }
+
+section#register .lab {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 26px;
+    padding-bottom: 24px;
+    margin-right: 30px;
+}
+
+section#register .labuname {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 0px;
+    padding-bottom: 24px;
+    margin-right: 0px;
+}
+
+section#register .labname {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 0px;
+    padding-bottom: 24px;
+    margin-right: 27px;
+}
+
+section#register .labpwd {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 4px;
+    padding-bottom: 24px;
+    margin-right: 0px;
+}
+
+/*regerror*/
+section#registererror .labuname1 {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 0px;
+    padding-bottom: 24px;
+    margin-right: 0px;
+}
+
+section#registererror .labname1 {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 0px;
+    padding-bottom: 24px;
+    margin-right: 27px;
+}
+
+section#registererror .labpwd1 {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 4px;
+    padding-bottom: 24px;
+    margin-right: 0px;
+}
+
+section#register .labemail {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 30px;
+    padding-bottom: 24px;
+    margin-right: 30px;
+}
+
+section#register .form-inline input {
+    margin-left: 20px;
+    width: 300px;
+}
+
+section#register #selection {
+    margin-left: 9px;
+}
+
+section#register .text-danger {
+    margin-left: 143px;
+
+    color: #e74c3c;
+}
+
+.members {
+    width: 1055px;
+    height: 570px;
+    background-color: black;
+    margin-left:23px;
+    margin-top:60px;
+
+
+}
+
+input#search {   
+    height:51px;
+    background-color: #ffe6a2;
+    font-size:17px;
+
+}
+
+
+.btn-orange {
+    color: white;
+    background-color: #ef771d;
+    height:51px;
+    width:90px;
+
+}
+.searchsection {
+    width:800px;
+    height:50px;
+
+}
+
+#searchsection {
+    margin-top:12px;
+    padding-left:150px;
+    padding-right:150px;
+}
+
+/*loginerror*/
+
+section#loginerror .container {
+    margin-left: 23px;
+    width: 1058px;
+    height: 625px;
+    background-color: black;
+    padding: 1px;
+   
+}
+
+
+section#loginerror .section-heading {
+    color: #fc7917;
+    font-family: 'Century Gothic';
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+section#loginerror #signin {
+    width: 170px;
+    height: 60px;
+    font-size: 15px;
+    margin-bottom:25px;
+    float: right;
+    color: yellow;
+    font-family: 'Century Gothic';
+}
+
+    section#loginerror #signin a {
+        color: yellow;
+        text-decoration: underline;
+    }
+
+section#loginerror .lab {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 26px;
+    padding-bottom: 24px;
+    margin-right: 30px;
+}
+
+section#loginerror .labuname {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 0px;
+    padding-bottom: 24px;
+    margin-right: 30px;
+}
+
+section#loginerror .labpwd {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 4px;
+    padding-bottom: 24px;
+    margin-right: 30px;
+}
+
+section#loginerror .labemail {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 30px;
+    padding-bottom: 24px;
+    margin-right: 30px;
+}
+
+section#loginerror .form-inline input {
+    margin-left: 20px;
+    width: 300px;
+}
+
+section#loginerror #selection {
+    margin-left: 9px;
+}
+
+section#loginerror .text-danger {
+    margin-left: 143px;
+
+    color: #e74c3c;
+}
+
+.footer2 {
+    margin-top: 10px;
+    position: relative;
+    padding: 9px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    height: 35px;
+    width: 1055px;
+    background-color: #ce6f30;
+    margin-left: 18px;
+}
+
+/*contact1*/
+section#contact1 {
+    margin-left: 19px;
+    width: 1055px;
+    height: 625px;
+    background-color: black;
+    padding: 80px;
+}
+
+    section#contact1 .section-heading {
+        color: #fc7917;
+        font-family: 'Century Gothic';
+        margin-bottom: 55px;
+    }
+
+    section#contact1 .form-group {
+        margin-bottom: 25px;
+    }
+
+        section#contact1 .form-group input,
+        section#contact1 .form-group textarea {
+            padding: 20px;
+            border: 2px solid;
+            border-color: gold;
+        }
+
+            section#contact1 .form-group input.form-control {
+                height: auto;
+            }
+
+            section#contact1 .form-group textarea.form-control {
+                height: 236px;
+            }
+
+    section#contact1 .form-control:focus {
+        border-color: #fed136;
+        box-shadow: none;
+    }
+
+    section#contact1::-webkit-input-placeholder {
+        text-transform: uppercase;
+        font-family: 'Century Gothic';
+        font-weight: 700;
+        color: #bbb;
+    }
+
+    section#contact1:-moz-placeholder {
+        text-transform: uppercase;
+        font-family: 'Century Gothic';
+        font-weight: 700;
+        color: #bbb;
+    }
+
+    section#contact1::-moz-placeholder {
+        text-transform: uppercase;
+        font-family: 'Century Gothic';
+        font-weight: 700;
+        color: #bbb;
+    }
+
+    section#contact1:-ms-input-placeholder {
+        text-transform: uppercase;
+        font-family: 'Century Gothic';
+        font-weight: 700;
+        color: #bbb;
+    }
+
+    section#contact1 .text-danger {
+        color: #e74c3c;
+    }
+
+
+/*registererror*/
+
+
+section#registererror .container {
+    margin-left: 23px;
+    width: 1055px;
+    height: 625px;
+    background-color: black;
+    padding: 1px;
+}
+
+
+section#registererror .section-heading {
+    color: #fc7917;
+    font-family: 'Century Gothic';
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+section#registererror #signin {
+    width: 170px;
+    height: 60px;
+    font-size: 15px;
+    margin-bottom:25px;
+    float: right;
+    color: yellow;
+    font-family: 'Century Gothic';
+}
+
+    section#registererror #signin a {
+        color: yellow;
+        text-decoration: underline;
+    }
+
+section#registererror .lab {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 26px;
+    padding-bottom: 24px;
+    margin-right: 30px;
+}
+
+section#registererror .labuname {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 0px;
+    padding-bottom: 24px;
+    margin-right: 30px;
+}
+
+section#registererror .labpwd {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 4px;
+    padding-bottom: 24px;
+    margin-right: 30px;
+}
+
+section#registererror .labemail {
+    clear: both;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: white;
+    padding-left: 43px;
+    padding-right: 30px;
+    padding-bottom: 24px;
+    margin-right: 30px;
+}
+
+section#registererror .form-inline input {
+    margin-left: 20px;
+    width: 300px;
+}
+
+section#registererror #selection {
+    margin-left: 9px;
+}
+
+section#registererror .text-danger {
+    margin-left: 143px;
+
+    color: #e74c3c;
+}
+
+.show {
+    margin-left:33px;
+    margin-top:30px;
+    color:#ffdd9e;
+    font-family:'Century Gothic';
+    font-size:19px;
+
+}
+
+.sh {
+    padding-top:7px;
+    color:#ffdd9e;
+    font-family:'Century Gothic';
+    font-size:19px;
+}
+
+.horizontal {
+    width:1000px;
+    height:1px;
+    border:0;
+    background-color:#ffdd9e;
+}
+
+.area {
+    width:1100px;
+    height:40px;
+    margin-left:33px;
+    margin-bottom:17px;
+    color:#ffdd9e;
+    font-family:'Century Gothic';
+    font-size:19px;   
+}
+
+h4 {
+    margin-left:25px;
+}
+
+.buttons {
+    padding:25px;
+}
+
+.btn-primary {
+    
+    margin-right:10px;
+}
+.btn-info {
+    margin-left:80px;
+    margin-right:10px;
+}
+.btn-warning {
+
+    margin-right:10px;
+}
+
+.btn-danger {
+
+    margin-right:10px;
+}
+
+.err {
+    color:#ff8455;
+    font-family:'Century Gothic';
+}
+
+.l {
+    font-family:'Century Gothic';
+    font-size:19px;
+    color:#ffdd9e;
+    border-radius:12px;
+}
+

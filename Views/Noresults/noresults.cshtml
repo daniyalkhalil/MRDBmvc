@@ -1,0 +1,99 @@
+﻿@model List<MRDBmvc.Models.song>
+
+@{
+    ViewBag.Title = "MRDB";
+    Layout = "/Views/Shared/_Layout2.cshtml";
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MRDB</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/images/favicon.ico" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/Mystylesheet.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+</head>
+<body id="page-top">
+    @{
+        HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        HttpContext.Current.Response.AddHeader("Pragma", "no-cache");
+        HttpContext.Current.Response.AddHeader("Expires", "0");
+
+        if (Session["key"] == null)
+        {
+            HttpContext.Current.Response.Redirect("/Home/Index/#login");
+        }
+    }
+
+    <!-- search -->
+
+    <div class="container">
+        
+        <div class="members">
+            <center> <h5 class="sh">Welcome, @Session["key"]</h5></center>
+            <div class="row">
+                <div class="col-lg-12">
+                    <center>
+                        <form method="get" action="/Members/members" class="form-group">
+                            <div id="searchsection">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="name" id="search" placeholder="Enter your song or artist name *" data-validation-required-message="*Please enter your song">
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-orange" id="b"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>Search</button>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </form>
+                    </center>
+
+                </div>
+            </div>
+            <p id="p10"></p>
+            <p class="show">Search Results : </p>
+            <hr class="horizontal" />
+
+            <h4 class="err">Sorry , No Results Found!</h4>
+        </div>
+        <div class="footer1">
+            <p>&copy; Copyrights 2015 MRDB, Music Rating Database</p>
+        </div>
+
+    </div>
+
+
+
+    @section scripts{
+
+        <script src="~/Scripts/jquery-2.1.1.min.js"></script>
+        <script src="~/Scripts/jqBootstrapValidation.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/agency.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="~/Scripts/cbpAnimatedHeader.js"></script>
+        <script src="~/Scripts/classie.js"></script>
+
+        <script>
+            $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); });
+        </script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                $("#b").click(function () {
+                    var s = $("#search").val();
+                    if (s == "") {
+                        $("#p10").text("* Please Enter Your Song");
+                        $("#p10").css("color", "#ffe6a2");
+                        $("#p10").css("margin-left", "150px");
+                    }
+                });
+
+            });
+        </script>
+
+    }
+
+</body>
+</html>

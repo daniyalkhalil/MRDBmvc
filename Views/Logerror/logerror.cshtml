@@ -1,0 +1,90 @@
+﻿@model MRDBmvc.Models.registertable
+@{
+
+    ViewBag.Title = "MRDB";
+    Layout = "/Views/Shared/_Layout1.cshtml";
+
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MRDB</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/images/favicon.ico" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/Mystylesheet.css" rel="stylesheet" />
+
+
+</head>
+<body id="page-top" class="index">
+
+    @* Header.. *@
+    <div class="container">
+        <!-- Sign in -->
+            <section id="loginerror">
+                <div class="container">
+                    <h2 class="section-heading">Sign in</h2>
+                    <div id="signin">Not Registered!<br /><a href="/Home/Index/#register">Register</a></div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            @using (Html.BeginForm("login", "Login", FormMethod.Post, new { @id = "signinform", @novalidate = "novalidate" }))
+                            {
+                                <div class="row">
+                                    <div class="col-md-9">
+
+                                        <div class="form-inline form-group">
+                                            @Html.Label("Username : ", new { @class = "labuname" })
+                                            @Html.TextBoxFor(t => t.username, new { @class = "form-control", @name = "username", @id = "uname", @required = "required", @placeholder = "Username *" })
+                                            <p id="p5" class="help-block text-danger"></p>
+                                        </div>
+
+                                        <div class=" form-inline form-group ">
+                                            @Html.Label("Password : ", new { @class = "labpwd" })
+                                            @Html.PasswordFor(t => t.password, new { @class = "form-control", @name = "password", @id = "pwd", @required = "required", @placeholder = "Password *" })
+                                            <p id="p6" class="help-block text-danger"></p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-12 text-center">
+                                        <button type="submit" id="loginbutton" class="btn btn-xl">Login</button>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <div class="footer2">
+            <p>&copy; Copyrights 2015 MRDB, Music Rating Database</p>
+        </div>
+    </div>
+
+
+
+    @section scripts{
+
+        <script src="~/Scripts/jquery-2.1.1.min.js"></script>
+        <script src="~/Scripts/jqBootstrapValidation.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/agency.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="~/Scripts/cbpAnimatedHeader.js"></script>
+        <script src="~/Scripts/classie.js"></script>
+
+        <script>
+            $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); });
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#p6").text("* Invalid username or password");
+                $("#p6").css("padding-left","22px");
+            });
+
+        </script>
+
+    }
+</body>
+</html>

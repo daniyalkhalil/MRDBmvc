@@ -1,0 +1,133 @@
+﻿@model MRDBmvc.Models.contacttable
+
+@{
+
+    ViewBag.Title = "MRDB";
+    Layout = "/Views/Shared/_Layout.cshtml";
+
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MRDB</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/images/favicon.ico" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/Mystylesheet.css" rel="stylesheet" />
+
+
+</head>
+<body id="page-top" class="index">
+
+    @* Header.. *@
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <a class="navbar-brand page-scroll" href="/Home/Index/#page-top">
+                <img src="~/Content/images/logo2.jpg" />
+            </a>
+            <div id="top">
+                <div class="navbar-header pull-right">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            @if (Session["key"] != null)
+                            {
+                                <li><a class="page-scroll" href="/Reg/reg">@Session["key"]</a></li>
+                            }
+                            <li><a class="page-scroll" href="/Home/Index/#page-top">Home</a></li>
+                            <li><a class="page-scroll" href="/Home/Index/#about">About</a></li>
+                            @if (Session["key"] == null)
+                            {
+                                <li><a class="page-scroll" id="r" href="/Home/Index/#register">Register / Login</a></li>
+                            }
+
+                            <li><a class="page-scroll" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Contact section -->
+
+        <section id="contact1">
+            <div id="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Contact Us</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        @using (Html.BeginForm("cont", "Contact", FormMethod.Post, new { @id = "contactForm", @novalidate = "novalidate" }))
+                        {
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" required data-validation-required-message="Please enter your name.">
+                                        <p id="p8" class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" required data-validation-required-message="Please enter your email address.">
+                                        <p id="p9" class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" name="phone" required data-validation-required-message="Please enter your phone number.">
+                                        <p id="p10" class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Your Message *" id="message" name="message" required data-validation-required-message="Please enter a message."></textarea>
+                                        <p id="p11" class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+                                    <div id="success"></div>
+                                    <button type="submit" id="b1" class="btn btn-xl">Send Message</button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div class="footer1">
+            <p>&copy; Copyrights 2015 MRDB, Music Rating Database</p>
+        </div>
+    </div>
+
+    @section scripts{
+        <script src="~/Scripts/jquery-2.1.1.min.js"></script>
+        <script src="~/Scripts/jqBootstrapValidation.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/agency.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="~/Scripts/cbpAnimatedHeader.js"></script>
+        <script src="~/Scripts/classie.js"></script>
+
+        <script>
+
+            $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                // Success message
+                $('#success').html("<div class='alert alert-success'>");
+                $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                    .append("</button>");
+                $('#success > .alert-success')
+                    .append("<strong>Your message has been sent. </strong>");
+                $('#success > .alert-success')
+                    .append('</div>');
+
+                //clear all fields
+                $('#contactForm').trigger("reset");
+            });
+
+        </script>
+    }
+
+</body>
+</html>
